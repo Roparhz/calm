@@ -1,9 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-
             <a class="navbar-brand" href="/">Home</a>
-
             <div class="d-flex gap-2" id="navbarColor01">
                 {% if app.user %}
                     <button class="btn btn-secondary bg-black my-2 my-sm-0"><a href="{{ path('profile_index') }}" class="text-decoration-none">Mon profil</a></button>
@@ -12,7 +10,6 @@
                     <button class="btn btn-secondary bg-black my-2 my-sm-0" type="submit"><a href="/register" class="text-decoration-none">Accès admin</a></button>
                 {% endif %}
             </div>
-
         </div>
     </nav>
 </header>

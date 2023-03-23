@@ -9,12 +9,26 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Bienvu chez CALM <br> Comme à la maison !</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/julien/Desktop/calm/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/julien/Desktop/calm/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+    <h1 class="">Bienvenu chez CALM <br> Comme à la maison !</h1>
+    <p>Le restaurant CALM vous propose une cuisine traditionnelle, familiale et faite maison. <br>
+        Nous vous proposons une carte variée à la semaine avec 3 entrées, 3 plats et 3 desserts. <br>
+    </p>
+    <p>Le restaurant est ouvert du lundi au vendredi à partir de midi et soir jusqu'à 19H30. <br></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p>Menu de la semaine : </p>
+                <img src="{{ asset('img/menu-semaine.jpg') }}" alt="menu de la semaine" title="menu de la semaine"
+                     width="40%">
+            </div>
+            <div class="col-6">
+                <p>Les plats : </p>
+                <img src="{{ asset('img/plat.jpg') }}" alt="Menu complet" title="menu complet" width="40%">
+                <img src="{{ asset('img/plat-2.jpg') }}" alt="Plat de crevette Thaï" title="Crevette Thaï" width="40%">
+            </div>
+        </div>
+    </div>
 </div>
+<div>Télépone : 06.74.54.85.07</div>
+<div>Adresse : 81 rue national, Sorigny</div>
 {% endblock %}
