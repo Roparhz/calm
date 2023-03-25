@@ -4,10 +4,15 @@
             <a class="navbar-brand" href="/">Home</a>
             <div class="d-flex gap-2" id="navbarColor01">
                 {% if app.user %}
-                    <button class="btn btn-secondary bg-black my-2 my-sm-0"><a href="{{ path('profile_index') }}" class="text-decoration-none">Mon profil</a></button>
-                    <button class="btn btn-secondary bg-black my-2 my-sm-0"><a href="{{ path('app_logout') }}" class="text-decoration-none">Logout</a></button>
+                    <button class="btn btn-secondary bg-black my-2 my-sm-0"><a href="{{ path('admin') }}"
+                                                                               class="text-decoration-none">Espace du
+                            chef
+                        </a></button>
+                    <button class="btn btn-secondary bg-black my-2 my-sm-0"><a href="{{ path('app_logout') }}"
+                                                                               class="text-decoration-none">Déconnexion</a></button>
                 {% else %}
-                    <button class="btn btn-secondary bg-black my-2 my-sm-0" type="submit"><a href="/register" class="text-decoration-none">Accès admin</a></button>
+                    <button class="btn btn-secondary bg-black my-2 my-sm-0" type="submit"><a
+                    href="/login" class="text-decoration-none">Accès admin</a></button>
                 {% endif %}
             </div>
         </div>

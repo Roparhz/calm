@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{#{% extends '@EasyAdmin/page/content.html.twig' %}#}
+
+{% block title %}Home Admin{% endblock %}
+
+{% block body %}
+
+<main class="container py3">
+    <section class="row py-md-5 py3 my-5 text-center">
+        <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+            <h1 class="display-4">Bienvenue sur ton espace chef !</h1>
+        </div>
+        <button type="button" class="btn btn-lg btn-secondary mt-3"><a href="{{ path('home_index')}}">Retour au site</a></button>
+
+    </section>
+</main>
+
+
+{% endblock %}
