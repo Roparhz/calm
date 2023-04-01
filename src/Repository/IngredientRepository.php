@@ -63,4 +63,9 @@ class IngredientRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+    public function add(mixed $ingredient)
+    {
+        $this->getEntityManager()->persist($ingredient);
+        $this->getEntityManager()->flush();
+    }
 }

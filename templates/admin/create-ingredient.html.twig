@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ 'Ingrédient' }}{% endblock %}
+
+{% block body %}
+    <div class=\"container\">
+        <h1>Enregistrement d'un ingrédient et de son prix</h1>
+        <div class=\"row\">
+            <div class=\"col-md-12\">
+                {{ form_start(ingredient_form) }}
+                    {{ form_row(ingredient_form.name) }}
+                    {{ form_row(ingredient_form.price) }}
+                <button type="submit" class="btn">Enregistrer</button>
+                {{ form_end(ingredient_form) }}
+                {% for type, messages in app.flashes() %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ type }} fixed-bottom d-flex justify-content-center">{{ message }}</div>
+                        <script>// TODO: regroupé les messages flash dans un fichier js !!
+                            setTimeout(function() {
+                                document.querySelector('.alert-{{ type }}').remove();
+                            }, 2000);
+                        </script>
+                    {% endfor %}
+                {% endfor %}
+                <button type="button" class="btn btn-lg btn-secondary mt-3"><a href="/admin" class="text-decoration-none">Retour</a></button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
